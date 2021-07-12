@@ -23,20 +23,20 @@
 			this.getImg = function() {
 				
 				if(this.result == 1) {
-					document.write("´ç½Å : °¡À§");
+					document.write("ë‹¹ì‹  : ê°€ìœ„");
 					var img = new Image();
 					img.src = './img/scissors.PNG';
 					document.body.appendChild(img);
 
 				}
 				else if(this.result == 2) {
-					document.write("´ç½Å : ¹ÙÀ§");
+					document.write("ë‹¹ì‹  : ë°”ìœ„");
 					var img = new Image();
 					img.src = './img/rock.PNG';
 					document.body.appendChild(img);
 				}
 				else if(this.result == 3) {
-					document.write("´ç½Å : º¸");
+					document.write("ë‹¹ì‹  : ë³´");
 					var img = new Image();
 					img.src = './img/paper.PNG';
 					document.body.appendChild(img);
@@ -58,19 +58,19 @@
 			this.getImg = function() {
 				
 				if(this.result == 1) {
-					document.write("ÄÄÇ»ÅÍ : °¡À§");
+					document.write("ì»´í“¨í„° : ê°€ìœ„");
 					var img = new Image();
 					img.src = './img/scissors.PNG';
 					document.body.appendChild(img);
 				}
 				else if(this.result == 2) {
-					document.write("ÄÄÇ»ÅÍ : ¹ÙÀ§");
+					document.write("ì»´í“¨í„° : ë°”ìœ„");
 					var img = new Image();
 					img.src = './img/rock.PNG';
 					document.body.appendChild(img);
 				}
 				else if(this.result == 3) {
-					document.write("ÄÄÇ»ÅÍ : º¸");
+					document.write("ì»´í“¨í„° : ë³´");
 					var img = new Image();
 					img.src = './img/paper.PNG';
 					document.body.appendChild(img);
@@ -83,17 +83,17 @@
 			var result = parseInt((p - c + 3) % 3);
 
 			if (result == 1) {
-				document.write("<h3>ÀÌ°å½À´Ï´Ù</h3>");
+				document.write("<h3>ì´ê²¼ìŠµë‹ˆë‹¤</h3>");
 			} else if (result == 2) {
-				document.write("<h3>Á³½À´Ï´Ù</h3>");
+				document.write("<h3>ì¡ŒìŠµë‹ˆë‹¤</h3>");
 			} else if (result == 0) {
-				document.write("<h3>ºñ°å½À´Ï´Ù</h3>");
+				document.write("<h3>ë¹„ê²¼ìŠµë‹ˆë‹¤</h3>");
 			}
 		}
 
 		
 		var me = new Person();
-		me.setResult(parseInt(prompt("°¡À§ = 1 ¹ÙÀ§ = 2 º¸ = 3")));
+		me.setResult(parseInt(prompt("ê°€ìœ„ = 1 ë°”ìœ„ = 2 ë³´ = 3")));
 
 		
 		me.getImg();
