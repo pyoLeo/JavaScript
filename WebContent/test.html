@@ -3,8 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+<script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 </head>
+<!-- JavaScript -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+	var data;
+	var test = new Array();
+	var icon = [];
+	var i = 0;
+	var j = 0;
+	$.ajax({
+		type: "get",
+		url: "tags.json",
+		dataType: "json",
+		async: false,
+		success:function(result) {
+			data = result;
+		}
+	});
+	
+	$.each(data, function(key, value){
+		test[i] = value;
+		if(key != "Editor") {
+			$.each(value, function(k, v){
+				icon = "ri-" + k + "-line";	
+				test[i][j] = icon;
+				j += 1;
+				icon = "ri-" + k + "-fill";	
+				test[i][j] = icon;
+				j+=1;
+			})
+		} else {
+			$.each(value, function(k, v){
+				icon = "ri-" + k + "-line";	
+				test[i][j] = icon;
+				j += 1;
+			})
+		}
+		j = 0;
+		i += 1;
+	})
+	console.log(test[7][1]);
+	console.log(test[8][1]);
+	var jsonData = JSON.stringify(test);
+	$.ajax({
+		type: "post",
+		url: "test.json",
+		contentType: "application/json",
+		data : {
+			json : jsonData
+		},
+		success:function(result) {
+			
+		}
+	});
+	$.ajax({
+		type: "get",
+		url: "test.json",
+		dataType: "json",
+		async: false,
+		success:function(result) {
+		
+		}
+	});
+});
+</script>
 <body>
-test
+<div id="myselect"></div>
 </body>
 </html>
