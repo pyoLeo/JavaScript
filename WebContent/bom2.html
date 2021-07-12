@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var newWindow = window.open("http://www.google.com", "openwindow", "width = 500", "height = 500");
+		
+		newWindow.moveTo(50, 50);
+		for(var i = 0; i < 1000; i++) {
+			newWindow.moveBy(1, 1);
+		}
+		
+		newWindow.resizeTo(500, 600);
+		for(var i = 0; i < 200; i++) {
+			newWindow.resizeBy(-1, -1);
+		}
+	</script>
+</body>
+</html>
