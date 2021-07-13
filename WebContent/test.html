@@ -11,8 +11,8 @@
 
 $(document).ready(function(){
 	var data;
-	var test = new Array();
-	var icon = [];
+	var test = {};
+	var icon = "";
 	var i = 0;
 	var j = 0;
 	$.ajax({
@@ -26,7 +26,8 @@ $(document).ready(function(){
 	});
 	
 	$.each(data, function(key, value){
-		test[i] = value;
+		test[key] =[];
+		test[key].put(key);
 		if(key != "Editor") {
 			$.each(value, function(k, v){
 				icon = "ri-" + k + "-line";	
@@ -46,29 +47,7 @@ $(document).ready(function(){
 		j = 0;
 		i += 1;
 	})
-	console.log(test[7][1]);
-	console.log(test[8][1]);
-	var jsonData = JSON.stringify(test);
-	$.ajax({	//수정한 json 어떻게 파일로 저장해야하는지
-		type: "post",
-		url: "test.json",
-		contentType: "application/json",
-		data : {
-			json : jsonData
-		},
-		success:function(result) {
-			
-		}
-	});
-	$.ajax({
-		type: "get",
-		url: "test.json",
-		dataType: "json",
-		async: false,
-		success:function(result) {
-		
-		}
-	});
+	
 });
 </script>
 <body>
