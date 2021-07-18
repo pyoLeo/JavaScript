@@ -10,7 +10,7 @@
 <script src="validation.js"></script>
 </head>
 <body>
-<form name="checkForm" action="result.html" id="checkForm" onsubmit="return false;">
+<form name="checkForm" method="post" action="result.html" id="checkForm" onsubmit="return false;">
 	<div id="inputEmail">
 		<span>email</span>
 		<input type="text" id="email" name="email">
