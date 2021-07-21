@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="InputOption.js"></script>
+<body>
+<form onsubmit="return false;">
+<input type="text" id="addOption" name="addOption">
+<select id="addBox">
+	<option value="apple">apple</option>
+</select>
+<button onclick="addBtnClick();">옵션 추가</button>
+<br><br>
+<select id="removeBox">
+	<option value="apple">apple</option>
+	<option value="banana">banana</option>
+	<option value="citrus">citrus</option>
+</select>
+<button onclick="removeBtnClick();">옵션 삭제</button>
+<br><br>
+<input type="text" id="inputEmail" placeholder="이메일">
+@
+<select id="siteId" onchange="selectCheck();">
+	<option value="" selected>직접입력</option>
+	<option value="naver.com">naver.com</option>
+	<option value="daum.net">daum.net</option>
+	<option value="nate.com">nate.com</option>
+</select>
+<input type="text" id="selfInput">
+<br>
+<button onclick="emailBtnClick();">이메일 만들기</button>
+<br>
+<div id="printEmail"></div>
+</form>
+</body>
+</html>
